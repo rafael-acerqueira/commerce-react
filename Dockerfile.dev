@@ -8,11 +8,11 @@ FROM registry.docker.com/library/ruby:$RUBY_VERSION-slim-bookworm
 WORKDIR /rails
 
 # Install packages needed to build gems
-RUN apt-get update -qq && \
+RUN apt-get update && \
   apt-get install --no-install-recommends -y build-essential git curl node-gyp sqlite3
 
 # Install JavaScript dependencies
-ARG NODE_VERSION=18.15.0
+ARG NODE_VERSION=20.0.0
 ARG YARN_VERSION=latest
 ENV PATH=/usr/local/node/bin:$PATH
 RUN curl -sL https://github.com/nodenv/node-build/archive/master.tar.gz | tar xz -C /tmp/ && \
