@@ -66,6 +66,6 @@ end
 
 
 
-gem "tailwindcss-rails", "~> 3.3"
+gem "tailwindcss-rails", "~> 4.1"
 
 gem "bcrypt", "~> 3.1"
